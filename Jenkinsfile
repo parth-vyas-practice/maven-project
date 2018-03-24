@@ -29,7 +29,7 @@ pipeline{
         stage('create-image & Deploy'){
             steps{
                 sh '''
-                    cp /var/lib/jenkins/workspace/maven/build/webapp/target/webapp.war /home/ubuntu/staging/
+                    cp /var/lib/jenkins/workspace/maven/pipeline/webapp/target/webapp.war /home/ubuntu/staging/
                     cd /home/ubuntu/scripts/
                     sh docker.sh
                 '''
